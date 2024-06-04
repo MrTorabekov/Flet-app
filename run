@@ -1,0 +1,5 @@
+web orqali run berish -> flet run --web main.py
+
+portini o'zgartirish -> flet run --web --port 8000 main.py
+
+pycharmni ozida run berish -> flet run main.py
