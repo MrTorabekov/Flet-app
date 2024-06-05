@@ -36,12 +36,22 @@ def main(page: ft.Page) -> None:
 
     def decrement(e: ControlEvent) -> None:
         text_number.value = str(int(text_number.value) - 1)
-
         page.update()
 
     def increment(e: ControlEvent) -> None:
         text_number.value = str(int(text_number.value) + 1)
         page.update()
+
+
+    page.add(
+        ft.Row(
+            [ft.IconButton(ft.icons.REMOVE, on_click=decrement),
+             text_number,
+             ft.IconButton(ft.icons.ADD, on_click=increment)
+             ],
+            alignment=ft.MainAxisAlignment.CENTER
+        )
+    )
 
     page.add(
         ft.Row(
